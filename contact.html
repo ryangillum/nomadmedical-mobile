@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Nomad Medical</title>
+    <meta
+      name="description"
+      content="Get in touch with Nomad Medical Group. Send us your questions, comments or partnership requests via our contact form."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Header -->
+         <header>
+         <!-- Make the logo clickable to navigate back to the homepage -->
+         <a href="index.html" class="logo">
+             <i class="fas fa-globe"></i> Nomad Medical
+           </a>
+           <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Subhero -->
+    <section class="subhero">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you.</p>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section">
+      <!-- Update contact form to submit via formsubmit.co and include a spam-prevention honeypot field -->
+      <form class="contact-form" action="https://formsubmit.co/info@nomadmedical.org" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <!-- Honeypot field to catch bots; normal users won't see or fill this -->
+        <input type="text" name="_honey" style="display:none" aria-hidden="true">
+        <!-- Email subject for the form submission -->
+        <input type="hidden" name="_subject" value="New Contact Form Submission from Nomad Medical">
+        <!-- Use a table template for the email for easier readability -->
+        <input type="hidden" name="_template" value="table">
+        <button type="submit" class="cta-button">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Nomad Medical Group, LLC. All rights reserved.</p>
+      <p>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms and Conditions</a>
+      </p>
+    </footer>
+  </body>
+</html>
