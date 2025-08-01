@@ -92,6 +92,16 @@ nav a:hover {
   color: var(--secondary-color);
 }
 
+/* Hide the default menu toggle button on larger screens */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
 /* Hero and sub‑hero sections */
 .hero {
   /* Use a fresh abstract illustration that matches the site’s breezy colour palette */
@@ -368,11 +378,30 @@ nav a:hover {
   screen space.
 */
 @media (max-width: 767px) {
+  /* Stack header elements on small screens */
   header {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  /* Show the menu toggle button on small screens */
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Hide navigation by default on mobile */
+  header nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Show navigation when open class is applied */
+  header nav.open {
+    display: block;
+  }
+
+  /* Stack nav items vertically on small screens */
   nav ul {
     flex-direction: column;
     width: 100%;
