@@ -108,12 +108,17 @@ nav a:hover {
   /* This new hero features flowing teal and turquoise shapes with a subtle medical cross */
   background-image: url('assets/hero-abstract.png');
   background-size: cover;
-  background-position: center;
+  /* Show the top of the illustration so that the cross is visible */
+  background-position: center top;
   /* Use the primary colour for text on the light gradient background to improve
      contrast and legibility. */
   color: var(--primary-color);
   text-align: center;
-  padding: 6rem 1rem;
+  /* Increase the vertical padding on the hero so the cross in the illustration is fully visible. */
+  padding: 8rem 1rem;
+  /* Ensure a minimum height on large screens to prevent the illustration from being cropped. */
+  /* Expand the hero’s minimum height further so the cross in the illustration appears in view */
+  min-height: 650px;
 }
 
 .hero h1 {
@@ -414,7 +419,9 @@ nav a:hover {
   }
 
   .hero {
-    padding: 4rem 1rem;
+    /* Increase padding on small screens slightly to reveal more of the hero illustration */
+    padding: 5rem 1rem;
+    min-height: 450px;
   }
 
   .hero h1 {
