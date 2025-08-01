@@ -378,10 +378,11 @@ nav a:hover {
   screen space.
 */
 @media (max-width: 767px) {
-  /* Stack header elements on small screens */
+  /* On small screens align logo and menu toggle horizontally and allow nav to wrap below */
   header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   /* Show the menu toggle button on small screens */
@@ -390,7 +391,7 @@ nav a:hover {
     margin-left: auto;
   }
 
-  /* Hide navigation by default on mobile */
+  /* Hide navigation by default on mobile; it will appear below header when open */
   header nav {
     display: none;
     width: 100%;
